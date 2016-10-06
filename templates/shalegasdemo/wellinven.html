@@ -1,0 +1,250 @@
+<html>
+    <head>
+   <meta charset="utf-8" />
+   <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   
+   <style>
+	#footer{
+		color:red;
+		position:relative;
+		left:500px;
+		top:350px;
+		
+	}
+	
+	.noborder{border:0;text-align:center;}
+	</style>
+    </head>
+<body>
+<!-- bootstrap的相关资源 -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+  <h4 align="center">Well Inventory</h4> 
+  <div  id="wellinventory">
+	<table border="1" align="center" frame="hsides">
+	 <tr><th bgcolor="#E6E6FA" align="center">Filter</th>
+	     <th bgcolor="#E6E6FA" align="center">Filter Value</th>
+	     <th bgcolor="#E6E6FA" align="center">Toggle<br> Select</th>
+	     <th bgcolor="#E6E6FA" align="center">Display<br> Results</th>
+	     <th bgcolor="#E6E6FA" align="center">Explain<br> Filter</th>
+	 </tr>
+	 <tr>
+	     <td  class="noborder">Project</td>
+	     <td  class="noborder" >
+	      <select name="project"> 
+           <option value="not selected" selected="selected">Not Selected</option> 
+           <option value="project1">project1</option> 
+           <option value="project2">project2</option> 
+           <option value="project3">project3</option> 
+           <option value="project4">project4</option> 
+          </select> 
+         </td>
+         <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+	 <tr>
+	     <td  class="noborder" > Well type</td>
+	     <td  class="noborder" >
+	       <select name="welltype"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="type1">type1</option> 
+            <option value="type2">type2</option> 
+            <option value="type3">type3</option> 
+            <option value="type4">type4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+	 </tr>
+	 <tr>
+	     <td  class="noborder" >Operater</td>
+	     <td  class="noborder" >
+	       <select name="operater"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="operater1">operater1</option> 
+            <option value="operater2">operater2</option> 
+            <option value="operater3">operater3</option> 
+            <option value="operater4">operater4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Basin</td>
+	     <td  class="noborder" >
+	       <select name="basin"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="basin1">basin1</option> 
+            <option value="basin2">basin2</option> 
+            <option value="basin3">basin3</option> 
+            <option value="basin4">basin4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Country</td>
+	     <td  class="noborder" >
+	       <select name="country"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="country1">country1</option> 
+            <option value="country2">country2</option> 
+            <option value="country3">country3</option> 
+            <option value="country4">country4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Field/equivalent </td>
+	     <td  class="noborder" >
+	       <select name="field"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="field1">field1</option> 
+            <option value="field2">field2</option> 
+            <option value="field3">field3</option> 
+            <option value="field4">field4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Offshore area/equivalent</td>
+	     <td  class="noborder" >
+	       <select name="offshore"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="offshore1">offshore"1</option> 
+            <option value="offshore2">offshore"2</option> 
+            <option value="offshore3">offshore"3</option> 
+            <option value="offshore4">offshore"4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Group</td>
+	     <td  class="noborder" >
+	       <select name="group"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="group1">group1</option> 
+            <option value="group2">group2</option> 
+            <option value="group3">group3</option> 
+            <option value="group4">group4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Formation</td>
+	     <td  class="noborder" >
+	       <select name="formation"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="formation1">formation1</option> 
+            <option value="formation2">formation2</option> 
+            <option value="formation3">formation3</option> 
+            <option value="formation4">formation4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Member</td>
+	     <td  class="noborder" >
+	       <select name="menber"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="menber1">menber1</option> 
+            <option value="menber2">menber2</option> 
+            <option value="menber3">menber3</option> 
+            <option value="menber4">menber4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Geological age</td>
+	     <td  class="noborder" >
+	       <select name="geoage"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="age1">age1</option> 
+            <option value="age2">age2</option> 
+            <option value="age3">age3</option> 
+            <option value="age4">age4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Depositional environment</td>
+	     <td  class="noborder" >
+	       <select name="depoenviro">
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="depoenviro1">depoenviro1</option> 
+            <option value="depoenviro2">depoenviro2</option> 
+            <option value="depoenviro3">depoenviro3</option> 
+            <option value="depoenviro4">depoenviro4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder">Depth range (min/max)</td>
+	     <td  class="noborder">
+	       <input type="text" name="depthmin" style="width:75px"/> / <input type="text" name="depthmax" style="width:75px">      
+	       <select name="depth"> 
+            <option value="feet" selected="selected">feet</option> 
+            <option value="meters">meters</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+         <td  class="noborder"></td>
+         <td  class="noborder">
+        
+           <button type="button" ><a href="./display.html" target="showframe">Display Wells</a></button>
+        
+           <button>Clear Selections</button>
+           <button>Help</button>
+           <button>Close</button>
+         </td>
+         <td  class="noborder" ></td>
+         <td  class="noborder" ></td>
+         <td  class="noborder" ></td>
+     </tr>
+	</table>
+ 
+  </div>
+  
+   
+ </body>
+ 
+  <!-- 脚标 -->
+  <footer id="footer">
+  <p>©Copyright by PKU,All Rights Reserved.</p>
+  <p>Contact information: <a href="mailto:liuying2013@pku.edu.cn">bulala@liuying2013@pku.edu.cn</a>.</p>
+</footer>
+</html>

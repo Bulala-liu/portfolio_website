@@ -1,0 +1,92 @@
+<html>
+  <head>
+   <meta charset="utf-8" />
+    <title >中国页岩油藏数据库-0.1</title>
+	<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <style type="text/css">
+     div{display:block;}
+     button{width:184px;height:25px;}
+     body{background-image: url(./left2.jpg);}
+     
+   </style>
+  </head>
+   <body>
+  <!-- bootstrap的相关资源 -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    
+<div class="btn-group-vertical" align="center"style="padding-top:220px; style="font-size:20px;
+	            font-weight: bold;"">
+  <button type="button" class="btn btn-secondary"><a href="./wellmap.html" target="showframe1">Summary Data</a></button>
+  <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#collapse1">RIB View</button>
+    <div id="collapse1" class=" collapse">
+     <ul class="nav nav-pills-vertical">
+      <li><a href="#sandstone"  data-toggle="tab" target="showframe1" >Scrolling Core</a></li>
+	  <li> <a href="#carbonate"  data-toggle="tab" target="showframe1">Core Gamma Spectral</a></li>
+	  <li><a href="#shale"  data-toggle="tab" target="showframe1">Custom Log</a></li>
+     </ul>     
+    </div>
+  <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#collapse2">Image Data</button>
+    <div id="collapse2" class=" collapse">
+     <ul class="nav nav-pills-vertical">
+      <li><a href="#sandstone"  data-toggle="tab" target="showframe1" >Core description</a></li>
+	  <li> <a href="#carbonate"  data-toggle="tab" target="showframe1">Core images(Color,multirow)</a></li>
+	  <li><a href="#shale"  data-toggle="tab" target="showframe1">Thin section images</a></li>
+	  <li><a href="#saved"  data-toggle="tab" target="showframe1">SEM images</a></li>
+     </ul>     
+    </div>
+  
+  <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#collapse3">Geological Data</button>
+    <div id="collapse3" class=" collapse">
+     <ul class="nav nav-pills-vertical">
+      <li><a href="#sandstone"  data-toggle="tab" target="showframe1" >X-ray diffraction(whole rock)</a></li>
+	  <li> <a href="#carbonate"  data-toggle="tab" target="showframe1">X-ray diffraction(Clay)</a></li>
+     </ul>     
+    </div>
+  
+  <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#collapse4">Petrophsical Data</button>
+    <div id="collapse4" class="collapse">
+     <ul class="nav nav-pills-vertical">
+      <li><a href="#queryData" target="showframe1" data-toggle="tab">Core gamma(Spectral)</a></li>
+	  <li><a href="#insertData"target="showframe1" data-toggle="tab">Gas Shale Characterization(GRI)</a></li>
+	  <li><a href="#modifyData" target="showframe1" data-toggle="tab">Fluid Sensitivity(Roller Oven Method)</a></li>
+	  <li><a href="#deleteData" target="showframe1" data-toggle="tab" >Fluid Sensitivity(Roller Oven Method)</a></li>
+     </ul>     
+    </div>
+    
+  <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#collapse5">Geomechanical Data</button>
+    <div id="collapse5" class=" collapse">
+     <ul class="nav nav-pills-vertical">
+      <li><a href="#sandstone"  data-toggle="tab" target="showframe1" >Static mechanical properties</a></li>
+	  <li> <a href="#carbonate"  data-toggle="tab" target="showframe1">Dynamic mechanical properties(Triaxial)</a></li>
+     </ul>     
+    </div>
+   <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#collapse6">Geochemical Data</button>
+    <div id="collapse6" class=" collapse">
+     <ul class="nav nav-pills-vertical">
+      <li><a href="#sandstone"  data-toggle="tab" target="showframe1" >Total organic carbon/pyrolysis</a></li>
+     </ul>     
+    </div> 
+   <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#collapse7">Sorbed Gas Data</button>
+    <div id="collapse7" class=" collapse">
+     <ul class="nav nav-pills-vertical">
+      <li><a href="#sandstone"  data-toggle="tab" target="showframe1" >Wellsite analysis</a></li>
+	  <li> <a href="#carbonate"  data-toggle="tab" target="showframe1">Desorption/Gas content</a></li>
+	  <li><a href="#shale"  data-toggle="tab" target="showframe1">Adsorption isotherm</a></li>
+     </ul>     
+    </div>
+   <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#collapse8">Electric Log Data</button>
+    <div id="collapse8" class=" collapse">
+     <ul class="nav nav-pills-vertical">
+      <li><a href="#sandstone"  data-toggle="tab" target="showframe1" >Basic Well Log</a></li>
+	  <li> <a href="#carbonate"  data-toggle="tab" target="showframe1">Processed Well Log</a></li>
+	  <li><a href="#shale"  data-toggle="tab" target="showframe1">Composite Electric Log</a></li>
+	  <li><a href="#saved"  data-toggle="tab" target="showframe1">Custom Log</a></li>
+     </ul>     
+    </div>
+  
+   <button type="button" class="btn btn-secondary"><a href="./wellmap.html" target="showframe1">Documents</a></button>
+</div>
+ </body>
+</html>

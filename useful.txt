@@ -1,0 +1,24 @@
+http://api.openweathermap.org/data/2.5/weather?q=Beijing&units=metric&APPID=26
+f67521b4bd30359a19b37a865f0c94&callback=JSON_CALLBACK
+
+https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=basketball&callback=JSON_CALLBACK
+
+
+http://openweathermap.org/img/w/10d.png
+
+http://api.openweathermap.org/data/2.5/forecast/daily?q=London&units=metric&cnt=7&APPID=26
+f67521b4bd30359a19b37a865f0c94&callback=JSON_CALLBACK
+
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+this is test.

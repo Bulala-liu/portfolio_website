@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+            input, button{outline: none;}
+
+.inputWithButton{
+    display:inline-block;
+    overflow:hidden;
+    border:1px solid gray;
+    border-radius: 8px;
+}
+.inputWithButton > *{
+    vertical-align:top;
+    border:0;
+    margin:0;
+    padding: 5px 15px;
+}
+.inputWithButton > input[type=text]{
+    width:150px;
+}
+.inputWithButton > button{
+    border-left:1px solid gray;
+    background:#eee;
+    cursor:pointer;
+    width:70px;
+}
+.inputWithButton > button::-moz-focus-inner {
+  border: 0;
+}
+        </style>
+    </head>
+    <body>
+        <form name="myform" novalidate="">
+            <span class="inputWithButton">
+                <input name="city" ng-model="city" placeholder="Your city name" required="" type="text">
+                    <button class="btn btn-default" ng-click="getData()" ng-disabled="myform.city.$dirty && myform.city.$invalid">
+                        search
+                    </button>
+                </input>
+            </span>
+            <p ng-show="myform.city.$dirty && myform.city.$invalid" style="color:red">
+                city name is required.
+            </p>
+        </form>
+    </body>
+</html>

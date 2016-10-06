@@ -1,0 +1,39 @@
+<html5>
+    <head>
+        <!-- 新 Bootstrap 核心 CSS 文件 -->
+        <link href="{{static_url('foodknow/foodknow.css')}}" rel="stylesheet">
+            <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+            <title>
+                welcome to FoodKnow!
+            </title>
+        </link>
+        <script src="{{static_url('foodknow/display_food.js')}}">
+            
+        </script>
+    </head>
+    <body>
+        <div class="container container-table">
+            <div class="row vertical-center-row">
+                <form  class="form-inline text-center"  role="form">
+                    <div class="input-group">
+                        <input class="form-control input-lg" name="food_name" id='food_name' type="text" id>
+                            <span class="input-group-btn">
+                                <button class="btn btn-default btn-success btn-lg" type="button" onclick='disp()'>
+                                    FoodKnow!
+                                </button>
+                            </span>
+                        </input>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id='food_area' class='text-center'> 这里显示食物</div>
+        <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+        <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js">
+        </script>
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js">
+        </script>
+    </body>
+</html5>

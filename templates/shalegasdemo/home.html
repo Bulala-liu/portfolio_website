@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+   <meta charset="utf-8" />
+    <title >中国页岩油气藏数据库-0.1</title>
+	<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+ 
+	<!-- javascript jquery函数  -->
+    <script language="javascript" type="text/javascript">
+      $(document).ready(function(){
+      
+		$("#query").click(function(){
+			var wellID=$("#wellID").val();
+			$.post("./queryData.jsp",{ID:wellID},function(data,status){ 
+            		
+            $("#qContent").append(data); 
+          }); 
+		 });
+		 
+	    $("#insert").click(function(){
+         var wellID=$("#welliD").val();
+         var wellDepth=$("#welldepth").val();
+         $.post("./insertData.jsp",{a:wellID,b:wellDepth},function(data,status)
+         {alert("插入数据："+data)
+         });
+        });
+       $("#update1").click(function(){
+         var wellID=$("#upiD").val();
+         var wellDepth=$("#updepth").val();
+         $.post("./updateData.jsp",{c:wellID,d:wellDepth},function(data,status)
+         {alert("修改数据："+data)
+         });
+        }); 
+       $("#delete1").click(function(){
+         var wellID=$("#deid").val();
+     
+         $.post("./deleteData.jsp",{a:wellID},function(data,status)
+         {alert("删除数据："+data)
+         });
+        }); 
+       
+  });  
+    </script>
+	
+	<!-- 样式表 -->
+	<style>
+	#footer{
+		color:red;
+		position:relative;
+		left:500px;
+		top:350px;
+		
+	}
+	
+	#navigation{font-size:20px;
+	            font-weight: bold;          
+	             
+	}
+	.noborder{border:0;text-align:center;}
+	#depo{width:25px;}
+	</style>
+</head>
+
+
+<body>
+
+    <!-- bootstrap的相关资源 -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+	
+	<!-- 导航标题和导航内容都是bootstrap现成的代码copy的 -->
+	<!-- 导航标题，注意这里的名字对应下面导航内容的名字 -->
+
+
+<ul class="nav nav-pills" id="navigation">  
+  <li style="display:inline;padding-left: 180px;"><a href="#wellmap" data-toggle="tab">井位置图</a></li>
+  <li><a href="#wellinventory" data-toggle="tab">井清单</a></li>  
+  <li><a href="#datainventory" data-toggle="tab">数据清单</a></li>
+  <li class="dropdown" id="droptest1">
+    <a id="droptest1" href="#droptest1" role="button" class="dropdown-toggle" data-toggle="dropdown">
+     岩石类型目录 <span class="caret"></span>
+    <span class="sr-only"></span>
+    </a>
+    <ul class="dropdown-menu" role="menu" aria-labeledby="droptest1">
+      <li><a href="#sandstone"  data-toggle="tab"  >砂岩目录</a></li>
+	  <li><a href="#carbonate"  data-toggle="tab">碳酸盐目录</a></li>
+	  <li><a href="#shale"  data-toggle="tab">页岩目录</a></li>
+	  <li><a href="#saved"  data-toggle="tab">保存的目录</a></li>
+	  <li><a href="#archived"  data-toggle="tab">存档的目录</a></li>
+    </ul>
+  </li>
+  <li><a href="#reserviorpro" data-toggle="tab">储层特性</a></li>
+  <li><a href="#documentlist" data-toggle="tab">文档清单</a></li>
+  
+  <li class="dropdown" id="droptest">
+    <a id="droptest" href="#droptest" role="button" class="dropdown-toggle" data-toggle="dropdown">
+     数据操作 <span class="caret"></span>
+    <span class="sr-only"></span>
+    </a>
+    <ul class="dropdown-menu" role="menu" aria-labeledby="droptest">
+      <li><a href="#queryData"  data-toggle="tab">查询数据</a></li>
+	  <li><a href="#insertData" data-toggle="tab">插入数据</a></li>
+	  <li><a href="#modifyData" data-toggle="tab">修改数据</a></li>
+	  <li><a href="#deleteData" data-toggle="tab" >删除数据</a></li>
+    </ul>
+  </li>
+  
+  <li><a href="#dataexport" data-toggle="tab">数据输出</a></li>
+  <li><a href="#help" data-toggle="tab">帮助</a></li>
+</ul>
+
+
+<!-- 导航内容 文字内容可以直接在里面进行修改-->
+<!-- 这里只需要一个<div class="tab-content">，所有的子div都放在这个div目录下。这样就是在同一个div里切换。baga,我不shacha吧：） -->
+<div class="tab-content">
+  <div class="tab-pane" id="wellmap">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d391566.3391962266!2d116.39745889999999!3d39.9388838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-CN!2scn!4v1393067644653" 
+ width="1500" height="600"  frameborder="0" style="border:0 align:"middle""></iframe>
+  </div>
+	
+  <div class="tab-pane" id="wellinventory">
+	<table border="1" align="center" frame="hsides">
+	 <tr><th bgcolor="#E6E6FA" align="center">Filter</th>
+	     <th bgcolor="#E6E6FA" align="center">Filter Value</th>
+	     <th bgcolor="#E6E6FA" align="center">Toggle<br> Select</th>
+	     <th bgcolor="#E6E6FA" align="center">Display<br> Results</th>
+	     <th bgcolor="#E6E6FA" align="center">Explain<br> Filter</th>
+	 </tr>
+	 <tr>
+	     <td  class="noborder" align="right" >Project</td>
+	     <td  class="noborder" >
+	      <select name="project"> 
+           <option value="not selected" selected="selected">Not Selected</option> 
+           <option value="project1">project1</option> 
+           <option value="project2">project2</option> 
+           <option value="project3">project3</option> 
+           <option value="project4">project4</option> 
+          </select> 
+         </td>
+         <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+	 <tr>
+	     <td  class="noborder" > Well type</td>
+	     <td  class="noborder" >
+	       <select name="welltype"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="type1">type1</option> 
+            <option value="type2">type2</option> 
+            <option value="type3">type3</option> 
+            <option value="type4">type4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+	 </tr>
+	 <tr>
+	     <td  class="noborder" >Operater</td>
+	     <td  class="noborder" >
+	       <select name="operater"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="operater1">operater1</option> 
+            <option value="operater2">operater2</option> 
+            <option value="operater3">operater3</option> 
+            <option value="operater4">operater4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Basin</td>
+	     <td  class="noborder" >
+	       <select name="basin"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="basin1">basin1</option> 
+            <option value="basin2">basin2</option> 
+            <option value="basin3">basin3</option> 
+            <option value="basin4">basin4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Country</td>
+	     <td  class="noborder" >
+	       <select name="country"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="country1">country1</option> 
+            <option value="country2">country2</option> 
+            <option value="country3">country3</option> 
+            <option value="country4">country4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Field/equivalent </td>
+	     <td  class="noborder" >
+	       <select name="field"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="field1">field1</option> 
+            <option value="field2">field2</option> 
+            <option value="field3">field3</option> 
+            <option value="field4">field4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Offshore area/equivalent</td>
+	     <td  class="noborder" >
+	       <select name="offshore"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="offshore1">offshore"1</option> 
+            <option value="offshore2">offshore"2</option> 
+            <option value="offshore3">offshore"3</option> 
+            <option value="offshore4">offshore"4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Group</td>
+	     <td  class="noborder" >
+	       <select name="group"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="group1">group1</option> 
+            <option value="group2">group2</option> 
+            <option value="group3">group3</option> 
+            <option value="group4">group4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Formation</td>
+	     <td  class="noborder" >
+	       <select name="formation"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="formation1">formation1</option> 
+            <option value="formation2">formation2</option> 
+            <option value="formation3">formation3</option> 
+            <option value="formation4">formation4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Member</td>
+	     <td  class="noborder" >
+	       <select name="menber"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="menber1">menber1</option> 
+            <option value="menber2">menber2</option> 
+            <option value="menber3">menber3</option> 
+            <option value="menber4">menber4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Geological age</td>
+	     <td  class="noborder" >
+	       <select name="geoage"> 
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="age1">age1</option> 
+            <option value="age2">age2</option> 
+            <option value="age3">age3</option> 
+            <option value="age4">age4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder" >Depositional environment</td>
+	     <td  class="noborder" >
+	       <select name="depoenviro">
+            <option value="not selected" selected="selected">Not Selected</option> 
+            <option value="depoenviro1">depoenviro1</option> 
+            <option value="depoenviro2">depoenviro2</option> 
+            <option value="depoenviro3">depoenviro3</option> 
+            <option value="depoenviro4">depoenviro4</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ><button>Multiple</button></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+	     <td  class="noborder">Depth range (min/max)</td>
+	     <td  class="noborder">
+	       <input type="text" name="depthmin" style="width:75px"/> / <input type="text" name="depthmax" style="width:75px">      
+	       <select name="depth"> 
+            <option value="feet" selected="selected">feet</option> 
+            <option value="meters">meters</option> 
+           </select> 
+	     </td>
+	     <td  class="noborder" ></td>
+         <td  class="noborder" ><input type="checkbox"></td>
+         <td  class="noborder" ><button>？</button></td>
+     </tr>
+     <tr>
+         <td  class="noborder"></td>
+         <td  class="noborder">
+        
+           <button type="button" data-loading-text="正在加载..."><a href="#display"  data-toggle="tab">Display Wells</a></button>
+        
+           <button>Clear Selections</button>
+           <button>Help</button>
+           <button>Close</button>
+         </td>
+         <td  class="noborder" ></td>
+         <td  class="noborder" ></td>
+         <td  class="noborder" ></td>
+     </tr>
+	</table>
+  </div>
+  
+   <div class="tab-pane" id="datainventory">
+  	<h2>统计报表<h2>
+	<p>数据总量</p>
+	<p>单井数量</p>
+	<p> 页岩气存量</p>
+	<p>。。。。。。：）</p>
+  </div>
+  
+   <div class="tab-pane" id="sandstone">
+    <p>luoshacha</p>
+   </div>
+   
+   <div class="tab-pane" id="carbonate">
+    <p>luoshacha1</p>
+   </div>
+   
+   <div class="tab-pane" id="shale">
+    <p>luoshacha2</p>
+  </div>
+  
+   <div class="tab-pane" id="saved">
+    <p>luoshacha3</p>
+  </div>
+  
+  <div class="tab-pane" id="archived">
+    <p>luoshacha4</p>
+  </div>
+
+  <div class="tab-pane" id="reserviorpro">
+  	<p>luoshacha</p>
+  </div>
+  
+  <div class="tab-pane" id="documentlist">
+  	<p>bulala</p>
+  </div>
+	
+  <div class="tab-pane " id="queryData">	  
+	<p>wellID: <input type="text"  id="wellID"/></p>
+	<input type="submit" value="Submit" id="query" />  
+	<!-- 点击操作submit后，出发jquery函数，进行数据库查询，返回相应结果！ -->	
+	<p>下面是显示的结果</p>
+	<table  id="qContent" border="1">
+		<tr>
+		<th>WellID</th>
+		<th>wellDepth</th>
+		</tr>
+	</table>		
+   </div>
+   
+  <div class="tab-pane" id="insertData">
+	<table  id="insertContent" border="1">
+		<tr>
+		<th>WellID</th>
+		<th>wellDepth</th>
+		</tr>
+		<tr>
+		<td><input type="text" id="welliD" /></td>
+		<td><input type="text" id="welldepth" /></td>
+		</tr>
+	</table>	
+	<input type="submit" value="Insert" id="insert" />
+  </div>
+	  
+  <div class="tab-pane" id="modifyData">
+	<table  id="updateContent" border="1">
+		<tr>
+		<th>WellID</th>
+		<th>wellDepth</th>
+		</tr>
+		<tr>
+		<td><input type="text" id="upiD" /></td>
+		<td><input type="text" id="updepth" /></td>
+		</tr>
+	</table>	
+	<input type="submit" value="Update" id="update1" />	
+  </div>
+	  
+  <div class="tab-pane" id="deleteData">
+	wellID:<input type="text" id="deid">			
+	<input type="submit" value="Delete" id="delete1" />
+  </div>
+  <div class="tab-pane" id="dataexport">
+  </div>
+  
+  <div class="tab-pane" id="help"> 	
+  </div>
+  <div class="tab-pane" id="display">
+    <table border="1" align="center">
+      <tr><th colspan="4" >Well Count：</th></tr>
+      <tr style="color:blue"><td>Well Name</td>
+          <td>Country</td>
+          <td>State(Equivalent)</td>
+          <td>Country(Equivalent)</td>
+      </tr>
+      <tr>
+          <td><input type="checkbox"><a href="./welldata.html">Demo Shale Well#1</a></td>
+          <td>USA</td>
+          <td>Texas</td>
+          <td>Harris</td>
+      </tr>   
+    </table>
+  </div>
+  
+</div>
+
+
+
+	  <!-- 脚标 -->
+  <footer id="footer">
+  <p>©Copyright by PKU,All Rights Reserved.</p>
+  <p>Contact information: <a href="mailto:liuying2013@pku.edu.cn">bulala@liuying2013@pku.edu.cn</a>.</p>
+</footer>
+</body>
+</html>

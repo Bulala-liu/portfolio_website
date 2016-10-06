@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Bulala's Web World
+        </title>
+        <meta charset="utf-8">
+            <meta content="width=device-width, initial-scale=1" name="viewport">
+<!--                     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet"/> -->
+                    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+                        <link href="{{static_url('main/main.css')}}" rel="stylesheet">
+                            <link href="{{static_url('fancybox/jquery.fancybox.css')}}" media="screen" rel="stylesheet" type="text/css"/>
+                            <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js">
+                            </script>
+                            <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js">
+                            </script>
+
+                            </script>
+                            <script src="{{static_url('fancybox/jquery.fancybox.pack.js')}}" type="text/javascript">
+                            </script>
+                            <!-- jQuery source must be loaded before any other jquery plugins -->
+                            <!-- <script type="text/javascript">var $= jQuery.noConflict();</script> -->
+                            <script>
+                            $(document).ready(function() {
+                            $(".fancybox").fancybox({
+                                openEffect  : 'elastic',
+                                closeEffect : 'elastic',
+                                'closeBtn': true,
+                                'modal': false,
+                            });
+                        });
+                            </script>
+    </head>
+    <header class="top-header">
+        <div class="main-header container-fluid">
+            <div class="row">
+                <div class="logo col-md-8 col-sm-6 col-xs-4">
+                    <h1>
+                        <a href="/">
+                            <em>
+                                Bulala
+                            </em>
+                            Design
+                        </a>
+                    </h1>
+                </div>
+                <div class="social-top col-md-4 col-sm-6">
+                    <ul>
+                        <li>
+                            <a class="fa fa-facebook" href="#">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="fa fa-twitter" href="#">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="fa fa-linkedin" href="#">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="fa fa-google-plus" href="#">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-wrapper col-md-12 col-sm-12 col-xs-12">
+                    <ul>
+                        <li class="active">
+                            <a href="/">
+                                HOME
+                            </a>
+                        </li>
+                        <li>
+                            <a href="project.html">
+                                PROJECTS
+                            </a>
+                        </li>
+                        <li>
+                            <a href="resource.html">
+                                RESOURCES
+                            </a>
+                        </li>
+                        <li>
+                            <a href="note.html">
+                                NOTES
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <body>
+        <div class=" project-content container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-md-offset-2 project-item ">
+                    <div class="project-thumb">
+                        <img alt="" src="{{static_url('main/localweather.png')}}">
+                            <div class="overlay-b">
+                                <div class="overlay-inner">
+                                    <a class="fancybox fa fa-expand" href="{{static_url('main/localweather.png')}}" title="Weather in your city">
+                                    </a>
+                                </div>
+                            </div>
+                        </img>
+                    </div>
+                    <div class=" project-detail">
+                        <h2>
+                            <a href="/localweather/index.html" target="_blank">
+                                Weather in your city (angular)
+                            </a>
+                        </h2>
+
+
+                        <p>
+                            This project render you searching every city current weather and forcasts.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 project-item ">
+                    <div class="project-thumb">
+                        <img alt="" src="{{static_url('shalegasdemo/bg.jpg')}}">
+                            <div class="overlay-b">
+                                <div class="overlay-inner">
+                                    <a class="fancybox fa fa-expand" href="{{static_url('shalegasdemo/bg.jpg')}}" title="Weather in your city">
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="project-detail">
+                        <h2>
+                            <a href="/shalegasdemo/index.html" target="_blank">
+                                Shale gas database
+                            </a>
+                        </h2>
+                        <p>
+                            This project is a website display of shale gas, it provides various functionalities, such as search.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-md-offset-2 project-item ">
+                    <div class="project-thumb">
+                        <img alt="" src="{{static_url('main/localweather.png')}}">
+                            <div class="overlay-b">
+                                <div class="overlay-inner">
+                                    <a class="fancybox fa fa-expand" href="{{static_url('main/localweather.png')}}" title="Weather in your city">
+                                    </a>
+                                </div>
+                            </div>
+                        </img>
+                    </div>
+                    <div class="project-detail">
+                        <h2>
+                            <a href="/localweather2/index.html" target="_blank">
+                                Weather in your city (native js)
+                            </a>
+                        </h2>
+                        <p>
+                            This project render you searching every city current weather and forcasts.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 project-item ">
+                    <div class="project-thumb">
+                        <img alt="" src="{{static_url('main/foodknow.jpg')}}">
+                            <div class="overlay-b">
+                                <div class="overlay-inner">
+                                    <a class="fancybox fa fa-expand" href="main/foodknow.jpg" title="Weather in your city">
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                    <div class=" project-detail">
+                        <h2>
+                            <a href="/foodknow/index.html" target="_blank">
+                                Know What You Eat!
+                            </a>
+                        </h2>
+                        <p>
+                            This project render you searching every city current weather and forcasts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
