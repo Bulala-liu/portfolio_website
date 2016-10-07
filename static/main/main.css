@@ -1,3 +1,7 @@
+/*@font-face {
+  font-family: 'Oswald';
+  src: url('http://localhost/static/main/Oswald-Regular.ttf');
+}*/
 .logo {
 	padding-top: 20px;
     padding-bottom: 30px;
@@ -5,7 +9,7 @@
 }
 
 .logo h1 {
-  font-family: 'Rakkas', cursive;
+  font-family: Georgia;
   display: inline-block;
   font-size: 2em;
   text-transform: uppercase;
@@ -49,7 +53,8 @@
 	display: inline;
     margin-left: 30px;
     position: relative;
-    font-family: 'Lalezar', cursive;
+/*    font-family: 'Lalezar', cursive;*/
+    font-family: Impact;
     font-size: 2em;
 }
 .menu-wrapper ul li:after {
@@ -174,7 +179,7 @@ div#search input[type=text] {
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
-    /*background-image: 'searchicon.png';*/
+    background-image: url('http://localhost/static/main/searchicon.png');
     background-position: 10px 10px;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
@@ -207,7 +212,8 @@ div#search input[type=text]:focus {
 }
 #search a, p#help {
    text-decoration: none;
-   font-family: 'Arimo', cursive;
+/*   font-family: 'Arimo', cursive;*/
+   font-family: Helvetica;
    font-size: 1.5em;
    
    color: black;
@@ -326,6 +332,7 @@ div#search input[type=text]:focus {
   overflow: hidden;
 }
 .service-item .service-content h4 {
+  font-family: Tahoma;
   font-size: 18px;
   margin-bottom: 10px;
   font-weight: normal;
