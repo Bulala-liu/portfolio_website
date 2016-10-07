@@ -28,7 +28,7 @@ class FoodSearchHandler(tornado.web.RequestHandler):
 
     def post(self):
         food_name = self.get_argument('food_name')
-        sql = 'select * from foodknow where 名称 like "'+ food_name + '%"'
+        sql = 'select * from foodknow where 名称 like "%'+ food_name + '%"'
         cursor = dbcon.cursor()
         cursor.execute(sql)
         data = cursor.fetchall()

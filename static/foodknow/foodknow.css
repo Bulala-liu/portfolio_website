@@ -1,24 +1,28 @@
 /*@import url('http://getbootstrap.com/dist/css/bootstrap.css');*/
- html, body, .container-table {
+/* html, body, .container-table {
     height: 80%;
-}
+}*/
 .container-table {
     display: table;
+/*    border: 1px solid #f2f2f2;*/
+    padding-bottom:0;
+    padding-top: 199px;
 }
-.vertical-center-row {
+/*.vertical-center-row {
     display: table-cell;
     vertical-align: middle;
-}
+}*/
 body {
-	background-image: url('http://localhost/static/main/food3.jpg');
+	background-image: url('http://localhost/static/main/food3副本_meitu_2.jpg');
 	background-origin: border-box;
 	background-repeat: no-repeat;
-	/*background-size: 1300px 1000px;*/
-	background-position: center;
+	background-size: 1300px 800px;
+	/*background-position: center;*/
 }
 #food_area {
-	padding-top: 0px;
-	border-bottom: 1px solid #f2f2f2;
+	margin-top: 20px;
+	padding-top: 20px;
+/*	border: 1px solid #f2f2f2;*/
 }
 
 table {

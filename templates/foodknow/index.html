@@ -7,26 +7,26 @@
                 welcome to FoodKnow!
             </title>
         <meta charset="UTF-8">
-        <script src="{{static_url('foodknow/display_food.js')}}">
-            
-        </script>
     </head>
     <body>
         <div class="container container-table">
-            <div class="row vertical-center-row">
-                <form  class="form-inline text-center"  role="form">
+            <div class="row ">
+             <!--    <form  class="form-inline text-center"  role="form"> -->
+                <div class="col-md-4 col-md-offset-4">
                     <div class="input-group">
-                        <input class="form-control input-lg" name="food_name" id='food_name' type="text" id>
+                        <input class="form-control input-lg" name="food_name" id='food_name' type="text" >
                             <span class="input-group-btn">
-                                <button class="btn btn-default btn-success btn-lg" type="button" onclick='disp()'>
+                                <button class="btn btn-default btn-success btn-lg" type="button" >
                                     FoodKnow!
                                 </button>
                             </span>
-                       
                     </div>
-                </form>
-            </div>
-        </div>
+                </div>
+
+             </div>
+              <!--   </form> -->
+         </div>
+     
 
         <div id='food_area' class='text-center'>
 
@@ -36,6 +36,8 @@
         </script>
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js">
+        </script>
+        <script src="{{static_url('foodknow/display_food.js')}}">         
         </script>
     </body>
 </html5>

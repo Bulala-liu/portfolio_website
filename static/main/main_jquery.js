@@ -20,11 +20,12 @@ $(document).ready(function(){
             	var valHrefs=[];
             	var valH1s = [];
             	var valPs = [];
+                $('.wrapper-ul').empty();
                 $.each(result, function(i,item) {
                 	valHrefs.push(page + item.pageid);
                 	valH1s.push(item.title);
                 	valPs.push(item.extract);
-                    $('.wrapper-ul').append(" <ul><a href='x' target='_blank'><li><h1></h1><p></p> </li></a></ul> ");  
+                    $('.wrapper-ul').append("<ul><a href='x' target='_blank'><li><h1></h1><p></p> </li></a></ul> ");  
                 });
                 var length = valPs.length;
                 for(var i =0; i < length; i++){
