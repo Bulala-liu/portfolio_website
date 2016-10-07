@@ -1,4 +1,4 @@
-@import url('http://getbootstrap.com/dist/css/bootstrap.css');
+/*@import url('http://getbootstrap.com/dist/css/bootstrap.css');*/
  html, body, .container-table {
     height: 80%;
 }
@@ -10,8 +10,33 @@
     vertical-align: middle;
 }
 body {
-	background-image: url('http://localhost/static/main/food.png');
+	background-image: url('http://localhost/static/main/food3.jpg');
 	background-origin: border-box;
 	background-repeat: no-repeat;
-	background-size: 1200px 800px;
+	/*background-size: 1300px 1000px;*/
+	background-position: center;
 }
+#food_area {
+	padding-top: 0px;
+	border-bottom: 1px solid #f2f2f2;
+}
+
+table {
+    border-collapse: collapse;
+    width: 25%;
+    margin: 0 auto;
+}
+th {
+    background-color: #4CAF50;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    color: black;
+    border-bottom: 1px solid #f2f2f2;
+   
+}
+td { background-color: #f2f2f2;}
+/*tr:nth-child(even){background-color: #f2f2f2;}*/
+/*tr:hover {background-color: black;}*/

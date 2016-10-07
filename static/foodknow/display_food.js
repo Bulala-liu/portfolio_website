@@ -8,10 +8,19 @@ function disp(){
             cache:false,
             success:function(data){
                 foods = JSON.parse(data);
-                name = foods[0]['名称']
-                ca = foods[0]['钙']
-                var disp_str = '名称: '+ name +' ; 钙含量: ' + ca;
-                $('#food_area').html(disp_str);
+                name = foods[0]['名称'];
+                cal = foods[0]['能量'];
+                pro = foods[0]['蛋白质'];
+                fat= foods[0]['脂肪'];
+                ch = foods[0]['碳水化合物'];
+                na = foods[0]['钠'];
+                $('#food_area').append("<table><tr><th>营养成分</th><th>含量</th></tr>"
+                    + "<tr><td>能量</td><td id='en'></td></tr>"
+                    + "<tr><td>蛋白质</td><td id='proo'></td></tr>"
+                    + "<tr><td>钠</td><td id='naa'></td></tr></table>");
+                $('#en').text(cal);
+                $('#proo').text(pro);
+                $('#naa').text(na);
 
             },
             error:function(){
