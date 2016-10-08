@@ -19,12 +19,12 @@ p {font-family: sans-serif;}
 div > img {zoom:2; }
 #temp {
 	font-size:30px; 
-	font-family: 'Oswald',sans-serif !important;
+	font-family: Impact !important;
      line-height: 0;
 }
 #weather {
 	font-size:30px; 
-	font-family: 'Oswald',sans-serif !important;
+	font-family: Impact !important;
     margin: 0;
     padding: 0;
     line-height: 2;
@@ -70,7 +70,7 @@ li > img {
     vertical-align: center;      
 }
 #weekday1,#weekday2,#weekday3,#weekday4,#weekday5 {
-    font-family: 'Oswald',sans-serif !important;   
+    font-family: Helvetica !important;
     font-weight:bold;
     font-size: 20px;
     position: relative;
@@ -81,7 +81,7 @@ li > img {
 }
 #temp1,#temp2,#temp3,#temp4,#temp5 {
     font-size:15px; 
-	font-family: 'Oswald',sans-serif !important;
+	font-family: Helvetica !important;
     font-weight:bold;
     position: relative;
     top: 15px;
@@ -89,7 +89,7 @@ li > img {
 }
 #tempmin1,#tempmin2,#tempmin3,#tempmin4,#tempmin5 {
     font-size:13px; 
-	font-family: 'Oswald',sans-serif !important;
+	font-family: Helvetica !important;
     position: relative;
     top: 14px;
 
@@ -100,7 +100,7 @@ li > img {
     padding: 0;
 }
 .forcastwether {
-    margin-top: 15px;
+    margin-top: 25px;
 
 }
 

@@ -4,9 +4,6 @@
             <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
                 <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.min.css" rel="stylesheet prefetch">
                         <link href="{{static_url('localweather/weather.css')}}" rel="stylesheet" type="text/css">
-                            <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.min.css" rel="stylesheet prefetch">
-
-        </meta>
     </head>
     <body>
         <h1 class="text-center">
@@ -46,10 +43,10 @@
             </div>
             <div class="imgTemp">
                 <img src="{{!Data.iconsrc}}">
-                    <p class="temp">
+                    <p id="temp">
                         {{!Data.temp}} °C
                     </p>
-                    <p id="temp">
+                    <p id="weather">
                         {{!Data.weather}}
                     </p>
                 
@@ -64,10 +61,10 @@
                             {{!Data1.weekday}}
                         </p>
                         <img src="{{!Data1.iconsrc}}" title="{{!Data1.weather}}">
-                            <span id="temp1">
+                            <span class="temp1">
                                 {{!Data1.tempmax}} °C
                             </span>
-                            <p id="tempmin">
+                            <p class="tempmin">
                                 {{!Data1.tempmin}} °C
                             </p>
                         
@@ -77,10 +74,10 @@
                             {{!Data2.weekday}}
                         </p>
                         <img src="{{!Data2.iconsrc}}" title="{{!Data2.weather}}">
-                            <span id="temp1">
+                            <span class="temp1">
                                 {{!Data2.tempmax}} °C
                             </span>
-                            <p id="tempmin">
+                            <p class="tempmin">
                                 {{!Data2.tempmin}} °C
                             </p>
                         
@@ -90,10 +87,10 @@
                             {{!Data3.weekday}}
                         </p>
                         <img src="{{!Data3.iconsrc}}" title="{{!Data3.weather}}">
-                            <span id="temp1">
+                            <span class="temp1">
                                 {{!Data3.tempmax}} °C
                             </span>
-                            <p id="tempmin">
+                            <p class="tempmin">
                                 {{!Data3.tempmin}} °C
                             </p>
                        
@@ -103,23 +100,23 @@
                             {{!Data4.weekday}}
                         </p>
                         <img src="{{!Data4.iconsrc}}" title="{{!Data4.weather}}">
-                            <span id="temp1">
+                            <span class="temp1">
                                 {{!Data4.tempmax}} °C
                             </span>
-                            <p id="tempmin">
+                            <p class="tempmin">
                                 {{!Data4.tempmin}} °C
                             </p>
-                        \
+
                     </li>
                     <li class="li-class">
                         <p class="weekday1">
                             {{!Data5.weekday}}
                         </p>
                         <img src="{{!Data5.iconsrc}}" title="{{!Data5.weather}}">
-                            <span id="temp1">
+                            <span class="temp1">
                                 {{!Data5.tempmax}} °C
                             </span>
-                            <p id="tempmin">
+                            <p class="tempmin">
                                 {{!Data5.tempmin}} °C
                             </p>
                         

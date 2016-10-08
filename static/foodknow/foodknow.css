@@ -3,17 +3,17 @@
     height: 80%;
 }*/
 .container-table {
-    display: table;
+  /*  display: table;*/
 /*    border: 1px solid #f2f2f2;*/
     padding-bottom:0;
-    padding-top: 199px;
+    padding-top: 140px;
 }
 /*.vertical-center-row {
     display: table-cell;
     vertical-align: middle;
 }*/
 body {
-	background-image: url('http://localhost/static/main/food3.jpg');
+	background-image: url('http://localhost/static/main/food1_meitu_6.jpg');
 	background-origin: border-box;
 	background-repeat: no-repeat;
 	background-size: 1300px 800px;
@@ -34,12 +34,19 @@ th {
     background-color: #4CAF50;
 }
 
-th, td {
+th{
     padding: 8px;
-    text-align: center;
+    text-align: left;
     color: black;
    
 }
+
+/*td{
+    padding: 8px;
+    text-align: right;
+    color: black;
+   
+}*/
 tr:nth-child(even){ background-color: #f2f2f2;}
 tr:nth-child(odd) {background-color: #7ADE7A;}
 /*tr:nth-child(even){background-color: #f2f2f2;}*/
