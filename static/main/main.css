@@ -173,7 +173,7 @@ div.home{
 
 /*style of input*/
 div#search input[type=text] {
-    width: 150px;
+    width: 250px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -182,7 +182,7 @@ div#search input[type=text] {
     background-image: url('http://localhost/static/main/searchicon.png');
     background-position: 10px 10px;
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
+    padding: 12px 20px 12px 80px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
