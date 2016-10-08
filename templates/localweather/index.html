@@ -5,23 +5,12 @@
                 <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.min.css" rel="stylesheet prefetch">
                         <link href="{{static_url('localweather/weather.css')}}" rel="stylesheet" type="text/css">
                             <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.min.css" rel="stylesheet prefetch">
-                                <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js">
-                                </script>
-                                <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js">
-                                </script>
-                                <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
-                                </script>
-                                <script src="{{static_url('localweather/weather.js')}}">
-                                </script>
 
         </meta>
     </head>
     <body>
         <h1 class="text-center">
-            Weather in y
-            <i class="wi wi-solar-eclipse">
-            </i>
-            ur city
+            Weather in y<i class="wi wi-solar-eclipse"></i>ur city    
         </h1>
         <div ng-app="weather" ng-controller="weatherCrl">
             <div class="container">
@@ -38,7 +27,7 @@
                                             Search
                                         </button>
                                     </span>
-                                </input>
+                                
                             </div>
                             <p ng-show="myform.city.$dirty && myform.city.$invalid" style="color:red">
                                 city name is required.
@@ -63,7 +52,7 @@
                     <p id="temp">
                         {{!Data.weather}}
                     </p>
-                </img>
+                
             </div>
             <h2 class="text-center forcastwether">
                 Weather forcast
@@ -81,7 +70,7 @@
                             <p id="tempmin">
                                 {{!Data1.tempmin}} °C
                             </p>
-                        </img>
+                        
                     </li>
                     <li class="li-class">
                         <p class="weekday1">
@@ -94,7 +83,7 @@
                             <p id="tempmin">
                                 {{!Data2.tempmin}} °C
                             </p>
-                        </img>
+                        
                     </li>
                     <li class="li-class">
                         <p class="weekday1">
@@ -107,7 +96,7 @@
                             <p id="tempmin">
                                 {{!Data3.tempmin}} °C
                             </p>
-                        </img>
+                       
                     </li>
                     <li class="li-class">
                         <p class="weekday1">
@@ -120,7 +109,7 @@
                             <p id="tempmin">
                                 {{!Data4.tempmin}} °C
                             </p>
-                        </img>
+                        \
                     </li>
                     <li class="li-class">
                         <p class="weekday1">
@@ -133,7 +122,7 @@
                             <p id="tempmin">
                                 {{!Data5.tempmin}} °C
                             </p>
-                        </img>
+                        
                     </li>
                 </ul>
             </div>
@@ -144,5 +133,12 @@
         <footer>
             © copyright 2016 by Bulala-Workshop. All rights Reserved.
         </footer>
+    <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js">
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+    </script>
+    <script src="{{static_url('localweather/weather.js')}}">
+    </script>
     </body>
 </html>

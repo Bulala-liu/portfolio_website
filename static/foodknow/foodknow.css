@@ -13,7 +13,7 @@
     vertical-align: middle;
 }*/
 body {
-	background-image: url('http://localhost/static/main/food3副本_meitu_2.jpg');
+	background-image: url('http://localhost/static/main/food3.jpg');
 	background-origin: border-box;
 	background-repeat: no-repeat;
 	background-size: 1300px 800px;
@@ -36,11 +36,11 @@ th {
 
 th, td {
     padding: 8px;
-    text-align: left;
+    text-align: center;
     color: black;
-    border-bottom: 1px solid #f2f2f2;
    
 }
-td { background-color: #f2f2f2;}
+tr:nth-child(even){ background-color: #f2f2f2;}
+tr:nth-child(odd) {background-color: #7ADE7A;}
 /*tr:nth-child(even){background-color: #f2f2f2;}*/
 /*tr:hover {background-color: black;}*/

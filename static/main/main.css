@@ -97,7 +97,7 @@ div.home{
 .project-thumb {
   overflow: hidden;
   position: relative;
-  height: 300px;
+  height: 250px;
   -webkit-backface-visibility: hidden;
   /* Chrome, Safari, Opera */
   backface-visibility: hidden;

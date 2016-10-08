@@ -6,16 +6,19 @@ function disp(data){
                 fat= foods[0]['脂肪'];
                 ch = foods[0]['碳水化合物'];
                 na = foods[0]['钠'];
+                ca = foods[0]['钙'];
                 $('#food_area').empty();
-                $('#food_area').append("<table><tr><th>营养成分</th><th>含量</th></tr>"
+                $('#food_area').append("<table><tr><th>营养成分</th><th>含量 (/100g)</th></tr>"
                     + "<tr><td>能量</td><td id='en'></td></tr>"
                     + "<tr><td>蛋白质</td><td id='proo'></td></tr>"
                     + "<tr><td>脂肪</td><td id='fat'></td></tr>"
-                    + "<tr><td>钠</td><td id='naa'></td></tr></table>");
-                $('#en').text(cal);
-                $('#proo').text(pro);
-                $('#fat').text(fat);
-                $('#naa').text(na);
+                    + "<tr><td>钠</td><td id='na'></td></tr>"
+                    + "<tr><td>钙</td><td id='ca'></td></tr></table>");
+                $('#en').text(cal+' (kJ)');
+                $('#proo').text(pro+' (g)');
+                $('#fat').text(fat+' (g)');
+                $('#na').text(na+' (mg)');
+                $('#ca').text(ca+' (mg)');
 
 }
 
