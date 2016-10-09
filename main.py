@@ -13,6 +13,10 @@ from tornado.options import define, options
 
 
 define("port", default=80, help="run on the given port", type=int)
+define("host", default='localhost', help="the host address", type=str)
+define("user", default='root', help="the user name of mysql", type=str)
+define("passwd", default='', help="the passwd of mysql", type=str)
+define("database", default='bulala', help="the database name", type=str)
 
 class HTMLHandler(tornado.web.RequestHandler):
     def initialize(self, path):
@@ -49,7 +53,7 @@ if __name__ == '__main__':
         sys.setdefaultencoding("utf-8")
         tornado.options.parse_command_line()
         #connect mysqldb
-        dbcon = db.connect('localhost', 'root', '123456', 'bulala', charset='utf8')
+        dbcon = db.connect(options.host, options.user, options.passwd, options.database, charset='utf8')
         # , (r'/query', QueryHandler, dict(dbcon=dbcon))
         app = tornado.web.Application(
             handlers=[(r'/', HTMLHandler, dict(path='main/index.html')),
