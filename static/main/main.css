@@ -2,6 +2,8 @@
   font-family: 'Oswald';
   src: url('http://localhost/static/main/Oswald-Regular.ttf');
 }*/
+
+/*header style*/
 .logo {
 	padding-top: 20px;
     padding-bottom: 30px;
@@ -76,102 +78,29 @@
 .menu-wrapper ul li a:hover {
   color: #f69730;
 }
-div.home{
-   /*background: url('sky.png');*/
+/*html {
+   background: url('http://localhost/static/main/sky.png');
    background-repeat: no-repeat;
    background-size: cover;
+   background-origin: border-box;
    width: 100%;
    height: 100%;
+}*/
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+}
+body {
+  background: url('http://localhost/static/main/star.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;;
 }
 
-/*projects style*/
-.project-content {
-	margin-top: 1px;
-	background-color: #efefef;
-}
-.project-item {
-  overflow: hidden;
-  margin-bottom: 40px;
-  margin-top: 20px;
-}
-.project-thumb {
-  overflow: hidden;
-  position: relative;
-  height: 250px;
-  -webkit-backface-visibility: hidden;
-  /* Chrome, Safari, Opera */
-  backface-visibility: hidden;
-}
-.project-thumb img {
-  width: 100%;
-  height: 100%;
-}
-.overlay-b {
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  -webkit-transition: all 250ms ease-in-out;
-  -moz-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-  bottom: 0;
-  left: 0;
-}
-.project-thumb:hover .overlay-b {
-  opacity: 1;
-  visibility: visible;
-}
-.overlay-b .overlay-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-}
-.overlay-b .overlay-inner a {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -18px;
-  margin-top: -18px;
-  border: 1px solid #d5d5d5;
-  width: 36px;
-  height: 36px;
-  display: block;
-  text-align: center;
-  line-height: 36px;
-  color: white;
-}
-.overlay-b .overlay-inner a:hover {
-  color: #f69730;
-  border-color: #f69730;
-  text-decoration: none;
-
-}
-.project-detail {
-  background: 	#DCDCDC;
-  padding: 25px;
-  overflow: hidden;
-}
-
-.project-item .project-detail h2 {
-  font-size: 18px;
-  font-weight: normal;
-  margin: 0 0 10px 0;
-  display: block;
-}
-.project-item .project-detail h2 a {
-  color: #2c2c2c;
-}
-.project-item .project-detail h2 a:hover {
-  color: #f69730;
-  text-decoration: none;
-}
-
-
-/*style of input*/
+/*style of wikipidia search box*/
 div#search input[type=text] {
     width: 250px;
     box-sizing: border-box;
@@ -182,7 +111,7 @@ div#search input[type=text] {
     background-image: url('http://115.29.53.62/static/main/searchicon.png');
     background-position: 10px 10px;
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 80px;
+    padding: 12px 20px 12px 50px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
@@ -293,10 +222,100 @@ div#search input[type=text]:focus {
   }
  }
 
+
+/*projects style*/
+.project-content {
+	margin-top: 1px;
+	/*background-color: #efefef;*/
+}
+.project-item {
+  overflow: hidden;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+.project-thumb {
+  overflow: hidden;
+  position: relative;
+  height: 250px;
+  -webkit-backface-visibility: hidden;
+  /* Chrome, Safari, Opera */
+  backface-visibility: hidden;
+}
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+}
+.overlay-b {
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  bottom: 0;
+  left: 0;
+}
+.project-thumb:hover .overlay-b {
+  opacity: 1;
+  visibility: visible;
+}
+.overlay-b .overlay-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+}
+.overlay-b .overlay-inner a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -18px;
+  margin-top: -18px;
+  border: 1px solid #d5d5d5;
+  width: 36px;
+  height: 36px;
+  display: block;
+  text-align: center;
+  line-height: 36px;
+  color: white;
+}
+.overlay-b .overlay-inner a:hover {
+  color: #f69730;
+  border-color: #f69730;
+  text-decoration: none;
+
+}
+.project-detail {
+  background: 	#DCDCDC;
+  padding: 25px;
+  overflow: hidden;
+}
+
+.project-item .project-detail h2 {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0 0 10px 0;
+  display: block;
+}
+.project-item .project-detail h2 a {
+  color: #2c2c2c;
+}
+.project-item .project-detail h2 a:hover {
+  color: #f69730;
+  text-decoration: none;
+}
+
+
+
+
 /*  style of resources*/
 .content-wrapper {
   border-top: 1px solid white;
-  background: #efefef;
+  /*background: #efefef;*/
   padding-bottom: 250px;
   height: 100%;
   padding-top: 50px;
@@ -372,6 +391,12 @@ div#search input[type=text]:focus {
 .service-item:hover .service-icon i {
   color: #f69730;
   border-color: #f69730;
+}
+.service-item .service-content a {
+  text-decoration: none;
+}
+.service-item .service-content a:hover {
+  color: #f69730;
 }
 @media screen and (max-width: 768px) {
   .service-item .service-icon {

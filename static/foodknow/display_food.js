@@ -33,24 +33,32 @@ $(document).ready(function(){
     $('input').keypress(function(e){
         if(e.which == 13) {
         var food_name = $("#food_name").val();
-        var pd = {"food_name":food_name};
-        $.ajax({
-            type:"post",
-            url:"/query",
-            data:pd,
-            cache:false,
-            success: disp,
-            error:function(){
-                alert("error!");
-            },
-        });
-        }
+        
+        if (localStorage.hasOwnProperty(food_name)){
+            var foods = JSON.parse(localStorage.getItem(food_name));
+            // alert('in localStorage!');
+            disp_to_html(foods);
+        } else{
+            window.current_food = food_name;
+            var pd = {"food_name":food_name};
+            $.ajax({
+                type:"post",
+                url:"/query",
+                data:pd,
+                cache:false,
+                success: disp_and_save,
+                error:function(xhr){
+                    alert("An error ocurred: " + xhr.status+" " + xhr.statusText);
+                },
+            });
+          }
+     }
     });
     $('button').click(function(){
         var food_name = $("#food_name").val();
         if (localStorage.hasOwnProperty(food_name)){
             var foods = JSON.parse(localStorage.getItem(food_name));
-            alert('in localStorage!!!');
+            // alert('in localStorage!!!');
             disp_to_html(foods);
         } else {
             window.current_food = food_name;
@@ -61,8 +69,8 @@ $(document).ready(function(){
                 data:pd,
                 cache:false,
                 success: disp_and_save,
-                error:function(){
-                    alert("error!");
+                error:function(xhr){
+                    alert("An error ocurred: " + xhr.status+" " + xhr.statusText);
                 },
             });            
         }
