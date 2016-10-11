@@ -60,7 +60,7 @@ if __name__ == '__main__':
             (r'/project', HTMLHandler, dict(path='main/project.html')), 
             (r'/resource', HTMLHandler, dict(path='main/resource.html')),
             (r'/note', HTMLHandler, dict(path='main/note.html')),
-            (r'/weather_angularjs', HTMLHandler, dict(path='localweather/index.html')),
+            (r'/weather', HTMLHandler, dict(path='localweather/index.html')),
             (r'/weather_js', HTMLHandler, dict(path='localweather2/index.html')),
             (r'/foodknow', HTMLHandler, dict(path='foodknow/index.html')),
             (r'/query', FoodSearchHandler, dict(dbcon=dbcon)),
