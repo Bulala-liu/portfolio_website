@@ -64,7 +64,7 @@ if __name__ == '__main__':
             (r'/weather_js', HTMLHandler, dict(path='localweather2/index.html')),
             (r'/foodknow', HTMLHandler, dict(path='foodknow/index.html')),
             (r'/query', FoodSearchHandler, dict(dbcon=dbcon)),
-            (r'/shalegasdemo/index.html', HTMLHandler, dict(path='shalegasdemo/index.html')),
+            (r'/shalegasdemo', HTMLHandler, dict(path='shalegasdemo/index.html')),
             (r'/shalegasdemo/left.html', HTMLHandler, dict(path='shalegasdemo/left.html')),
             (r'/shalegasdemo/wellmap.html', HTMLHandler, dict(path='shalegasdemo/wellmap.html')),
             (r'/shalegasdemo/wellinven.html', HTMLHandler, dict(path='shalegasdemo/wellinven.html')),
