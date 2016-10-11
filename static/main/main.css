@@ -78,14 +78,7 @@
 .menu-wrapper ul li a:hover {
   color: #f69730;
 }
-/*html {
-   background: url('http://localhost/static/main/sky.png');
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-origin: border-box;
-   width: 100%;
-   height: 100%;
-}*/
+
 html {
     height: 100%;
 }
@@ -93,7 +86,7 @@ body {
     min-height: 100%;
 }
 body {
-  background: url('http://localhost/static/main/star.jpg') no-repeat center center fixed;
+  background: url('http://115.29.53.62/static/main/star.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -225,7 +218,7 @@ div#search input[type=text]:focus {
 
 /*projects style*/
 .project-content {
-	margin-top: 1px;
+	margin-top: 10px;
 	/*background-color: #efefef;*/
 }
 .project-item {

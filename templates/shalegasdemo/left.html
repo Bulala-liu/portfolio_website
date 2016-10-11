@@ -1,47 +1,119 @@
 <!DOCTYPE html>
 <html>
-  <head>
-   <meta charset="utf-8" />
-    <title >中国页岩油藏数据库-0.1</title>
-    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{static_url('shalegasdemo/shale.css')}}" rel="stylesheet">
-  </head>
-   <body style="background-image: url({{static_url('shalegasdemo/left2.jpg')}})">
-    
-<div class="btn-group-vertical" align="center" style="padding-top:220px; font-size:18px; font-weight: bold;">
-  <button type="button" class="btn btn-secondary"><a href="/shalegasdemo/wellmap.html" target="showframe">井位置图</a></button>
-  <button type="button" class="btn btn-secondary"><a href="/shalegasdemo/wellinven.html"  target="showframe">井清单</a></button>
-  <button type="button" class="btn btn-secondary"><a href="/shalegasdemo/datainventory.html"  target="showframe">数据清单</a></button>
-  
-  <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#collapseOne">岩石类型目录</button>
-    <div id="collapseOne" class=" collapse">
-     <ul class="nav nav-pills-vertical">
-      <li><a href="#sandstone"  data-toggle="tab" target="showframe" >砂岩目录</a></li>
-	  <li> <a href="#carbonate"  data-toggle="tab" target="showframe">碳酸盐目录</a></li>
-	  <li><a href="#shale"  data-toggle="tab" target="showframe">页岩目录</a></li>
-	  <li><a href="#saved"  data-toggle="tab" target="showframe">保存的目录</a></li>
-	  <li><a href="#archived"  data-toggle="tab" target="showframe">存档的目录</a></li>
-     </ul>     
-    </div>
-    
-  <button type="button" class="btn btn-secondary" ><a href="#reserviorpro" data-toggle="tab" target="showframe">储层特性</a></button>
-  <button type="button" class="btn btn-secondary"><a href="#documentlist" data-toggle="tab" target="showframe">文档清单</a></button>
-  
-  <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#collapsetwo">数据操作</button>
-    <div id="collapsetwo" class="collapse">
-     <ul class="nav nav-pills-vertical">
-      <li><a href="#queryData" target="showframe" data-toggle="tab">查询数据</a></li>
-	  <li><a href="#insertData"target="showframe" data-toggle="tab">插入数据</a></li>
-	  <li><a href="#modifyData" target="showframe" data-toggle="tab">修改数据</a></li>
-	  <li><a href="#deleteData" target="showframe" data-toggle="tab" >删除数据</a></li>
-     </ul>     
-    </div>
-    
-  <button type="button" class="btn btn-secondary"><a href="#dataexport" target="showframe" data-toggle="tab">数据输出</a></button>
-  <button type="button" class="btn btn-secondary"><a href="#help" target="showframe" data-toggle="tab">帮助</a></button>
-  
-</div>
-<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
- </body>
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            中国页岩油藏数据库-0.1
+        </title>
+            <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+<!--             <link href="{{static_url('shalegasdemo/shale.css')}}" rel="stylesheet"> -->
+      <style>
+      div{
+        display:block;
+      }
+      button{width:184px;height:25px;}
+      </style>
+    </head>
+    <body style="background-image: url({{static_url('shalegasdemo/left2.jpg')}})">
+        <div align="center" class="btn-group-vertical" style="padding-top:220px; font-size:18px; font-weight: bold;">
+            <button class="btn btn-secondary" type="button" >
+                <a href="/shalegasdemo/wellmap.html" target="showframe">
+                    井位置图
+                </a>
+            </button>
+            <button class="btn btn-secondary" type="button">
+                <a href="/shalegasdemo/wellinven.html" target="showframe">
+                    井清单
+                </a>
+            </button>
+            <button class="btn btn-secondary" type="button">
+                <a href="/shalegasdemo/datainventory.html" target="showframe">
+                    数据清单
+                </a>
+            </button>
+            <button class="btn btn-secondary" data-target="#collapseOne" data-toggle="collapse" type="button">
+                岩石类型目录
+            </button>
+            <div class=" collapse" id="collapseOne">
+                <ul class="nav nav-pills-vertical">
+                    <li>
+                        <a data-toggle="tab" href="#sandstone" target="showframe">
+                            砂岩目录
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#carbonate" target="showframe">
+                            碳酸盐目录
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#shale" target="showframe">
+                            页岩目录
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#saved" target="showframe">
+                            保存的目录
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#archived" target="showframe">
+                            存档的目录
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn btn-secondary" type="button">
+                <a data-toggle="tab" href="#reserviorpro" target="showframe">
+                    储层特性
+                </a>
+            </button>
+            <button class="btn btn-secondary" type="button">
+                <a data-toggle="tab" href="#documentlist" target="showframe">
+                    文档清单
+                </a>
+            </button>
+            <button class="btn btn-secondary" data-target="#collapsetwo" data-toggle="collapse" type="button">
+                数据操作
+            </button>
+            <div class="collapse" id="collapsetwo">
+                <ul class="nav nav-pills-vertical">
+                    <li>
+                        <a data-toggle="tab" href="#queryData" target="showframe">
+                            查询数据
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#insertData" target="showframe">
+                            插入数据
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#modifyData" target="showframe">
+                            修改数据
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#deleteData" target="showframe">
+                            删除数据
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn btn-secondary" type="button">
+                <a data-toggle="tab" href="#dataexport" target="showframe">
+                    数据输出
+                </a>
+            </button>
+            <button class="btn btn-secondary" type="button">
+                <a data-toggle="tab" href="#help" target="showframe">
+                    帮助
+                </a>
+            </button>
+        </div>
+        <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js">
+        </script>
+        <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js">
+        </script>
+    </body>
 </html>

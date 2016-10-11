@@ -16,12 +16,13 @@ function disp_to_html(foods){
         na = foods[0]['钠'];
         ca = foods[0]['钙'];
         $('#food_area').empty();
-        $('#food_area').append("<table><tr><th>营养成分</th><th>含量 (/100g)</th></tr>"
+        $('#food_area').append("<table><caption></caption><tr><th>营养成分</th><th>含量 (/100g)</th></tr>"
             + "<tr><td>能量</td><td id='en'></td></tr>"
             + "<tr><td>蛋白质</td><td id='proo'></td></tr>"
             + "<tr><td>脂肪</td><td id='fat'></td></tr>"
             + "<tr><td>钠</td><td id='na'></td></tr>"
             + "<tr><td>钙</td><td id='ca'></td></tr></table>");
+        $('caption').text(name+': '+'营养成分表');
         $('#en').text(cal+' (kJ)');
         $('#proo').text(pro+' (g)');
         $('#fat').text(fat+' (g)');

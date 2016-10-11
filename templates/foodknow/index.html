@@ -1,8 +1,9 @@
 <html5>
     <head>
         <!-- 新 Bootstrap 核心 CSS 文件 -->
-        <link href="{{static_url('foodknow/foodknow.css')}}" rel="stylesheet">
+       <!--  to prevent your definded style overridden by bootstrap, put your css file before it!!! -->
             <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+            <link href="{{static_url('foodknow/foodknow.css')}}" rel="stylesheet">
             <title>
                 welcome to FoodKnow!
             </title>
