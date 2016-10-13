@@ -26,6 +26,18 @@ class HTMLHandler(tornado.web.RequestHandler):
         self.render(self.path)
 
 
+def score(search_key, food_name):
+    if search_key == food_name:
+        return 0
+    elif food_name.startswith(search_key) or search_key.startswith(food_name):
+        return 1
+    elif food_name.endswith(search_key) or search_key.endswith(food_name):
+        return 2
+    elif food_name in search_key or search_key in  food_name:
+        return 3
+    else: return 4
+
+
 class FoodSearchHandler(tornado.web.RequestHandler):
     def initialize(self, dbcon):
         self.dbcon = dbcon
@@ -43,7 +55,9 @@ class FoodSearchHandler(tornado.web.RequestHandler):
             food = {}
             for i in range(1, num):
                 food[columns[i]] = f[i]
+            food['match_score'] = score(food_name, food['名称'])
             foods.append(food)
+        foods.sort(key=lambda x: x['match_score'])
         self.write(json.dumps(foods))
         # self.render('food_result.html', food_results=foods, original_name=food_name)
 
@@ -54,7 +68,6 @@ if __name__ == '__main__':
         tornado.options.parse_command_line()
         #connect mysqldb
         dbcon = db.connect(options.host, options.user, options.passwd, options.database, charset='utf8')
-        # , (r'/query', QueryHandler, dict(dbcon=dbcon))
         app = tornado.web.Application(
             handlers=[(r'/', HTMLHandler, dict(path='main/index.html')),
             (r'/project', HTMLHandler, dict(path='main/project.html')), 
