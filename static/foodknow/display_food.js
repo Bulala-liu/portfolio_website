@@ -8,6 +8,9 @@ function disp_and_save(data){
 }
 
 function disp_to_html(foods){
+        if (foods.length == 0){
+            alert("No result!");
+        }
         name = foods[0]['名称'];
         cal = foods[0]['能量'];
         pro = foods[0]['蛋白质'];
@@ -34,10 +37,10 @@ $(document).ready(function(){
     $('input').keypress(function(e){
         if(e.which == 13) {
         var food_name = $("#food_name").val();
-        
+           
         if (localStorage.hasOwnProperty(food_name)){
             var foods = JSON.parse(localStorage.getItem(food_name));
-            // alert('in localStorage!');
+            // alert(localStorage['大米']);
             disp_to_html(foods);
         } else{
             window.current_food = food_name;
@@ -49,7 +52,7 @@ $(document).ready(function(){
                 cache:false,
                 success: disp_and_save,
                 error:function(xhr){
-                    alert("An error ocurred: " + xhr.status+" " + xhr.statusText);
+                    alert('status: ' + xhr.status+'statusText: ' + xhr.statusText);
                 },
             });
           }
@@ -71,7 +74,7 @@ $(document).ready(function(){
                 cache:false,
                 success: disp_and_save,
                 error:function(xhr){
-                    alert("An error ocurred: " + xhr.status+" " + xhr.statusText);
+                    alert('status: ' + xhr.status +'statusText: ' + xhr.statusText);
                 },
             });            
         }
