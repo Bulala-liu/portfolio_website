@@ -52,7 +52,7 @@ $(document).ready(function(){
                 cache:false,
                 success: disp_and_save,
                 error:function(xhr){
-                    alert('status: ' + xhr.status+'statusText: ' + xhr.statusText);
+                    alert(xhr.status+': ' + xhr.statusText);
                 },
             });
           }
@@ -74,7 +74,7 @@ $(document).ready(function(){
                 cache:false,
                 success: disp_and_save,
                 error:function(xhr){
-                    alert('status: ' + xhr.status +'statusText: ' + xhr.statusText);
+                    alert(xhr.status+': ' + xhr.statusText);
                 },
             });            
         }
